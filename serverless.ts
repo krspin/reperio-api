@@ -5,10 +5,10 @@ import recipes from '@functions/recipes';
 
 const config = {
   "user": "shehbaj",
-  "password": "shehbaj",
+  "password": "",
   "host": "localhost",
   "database": "reperiodb",
-  "port": "5432"
+  "port": "3306"
 }
 
 const serverlessConfiguration: AWS = {
