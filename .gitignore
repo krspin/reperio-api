@@ -1,1 +1,7 @@
-node_modules/
+# Node package dirs
+node_modules
+jspm_packages
+
+# Serverless framework dirs
+.serverless
+
