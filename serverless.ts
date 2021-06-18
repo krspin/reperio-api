@@ -3,6 +3,14 @@ import type { AWS } from '@serverless/typescript';
 import hello from '@functions/hello';
 import recipes from '@functions/recipes';
 
+const config = {
+  "user": "shehbaj-admin",
+  "password": "dZn5Yz8pxtRyAb5vw3JE",
+  "host": "reperiodb.caaeopmj7byg.us-east-1.rds.amazonaws.com",
+  "database": "reperiodb",
+  "port": "5432"
+}
+
 const serverlessConfiguration: AWS = {
   service: 'reperio-api',
   frameworkVersion: '2',
@@ -16,12 +24,18 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
+    stage: 'dev',
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
+      dbDatabaseName: config.database,
+      dbUsername: config.user,
+      dbPassword: config.password,
+      dbPortNumber: config.port,
+      dbHostname: config.host
     },
     lambdaHashingVersion: '20201221',
   },
