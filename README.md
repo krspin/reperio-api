@@ -1,3 +1,7 @@
+aws cli credentials
+AKIAYTUDTHIWXVHMHHKE
+UEdL/3eHgXIkU1r/AOdWb7oAbAcF1X0E6YGeXTJ4
+
 # Serverless - AWS Node.js Typescript
 
 This project has been generated using the `aws-nodejs-typescript` template from the [Serverless framework](https://www.serverless.com/).
