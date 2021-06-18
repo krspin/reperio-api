@@ -4,9 +4,9 @@ import hello from '@functions/hello';
 import recipes from '@functions/recipes';
 
 const config = {
-  "user": "shehbaj-admin",
-  "password": "dZn5Yz8pxtRyAb5vw3JE",
-  "host": "reperiodb.caaeopmj7byg.us-east-1.rds.amazonaws.com",
+  "user": "shehbaj",
+  "password": "shehbaj",
+  "host": "localhost",
   "database": "reperiodb",
   "port": "5432"
 }
