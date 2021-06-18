@@ -1991,6 +1991,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/knex@^0.16.1":
+  "integrity" "sha512-54gWD1HWwdVx5iLHaJ1qxH3I6KyBsj5fFqzRpXFn7REWiEB2jwspeVCombNsocSrqPd7IRPqKrsIME7/cD+TFQ=="
+  "resolved" "https://registry.npmjs.org/@types/knex/-/knex-0.16.1.tgz"
+  "version" "0.16.1"
+  dependencies:
+    "knex" "*"
+
 "@types/lodash@^4.14.123":
   "integrity" "sha512-bpcvu/MKHHeYX+qeEN8GE7DIravODWdACVA1ctevD8CN24RhPZIKMn9ntfAsrvLfSX3cR5RrBKAbYm9bGs0A+Q=="
   "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.170.tgz"
@@ -7398,7 +7405,7 @@
   "resolved" "https://registry.npmjs.org/klona/-/klona-2.0.4.tgz"
   "version" "2.0.4"
 
-"knex@^0.95.6":
+"knex@*", "knex@^0.95.6":
   "integrity" "sha512-noRcmkJl1MdicUbezrcr8OtVLcqQ/cfLIwgAx5EaxNxQOIJff88rBeyLywUScGhQNd/b78DIKKXZzLMrm6h/cw=="
   "resolved" "https://registry.npmjs.org/knex/-/knex-0.95.6.tgz"
   "version" "0.95.6"
