@@ -1,7 +1,7 @@
 export default {
   type: "object",
   properties: {
-    ingredients: { type: 'object' }
+    ingredients: {type: "string[]"},
   },
-  required: ["ingredients"]
+  required: ['ingredients']
 } as const;
