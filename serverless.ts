@@ -1,6 +1,7 @@
 import type { AWS } from '@serverless/typescript';
 
 import hello from '@functions/hello';
+import recipes from '@functions/recipes';
 
 const serverlessConfiguration: AWS = {
   service: 'reperio-api',
@@ -25,7 +26,7 @@ const serverlessConfiguration: AWS = {
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
-  functions: { hello },
+  functions: { hello, recipes },
 };
 
 module.exports = serverlessConfiguration;
