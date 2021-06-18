@@ -1,0 +1,19 @@
+import schema from "./schema";
+import { handlerPath } from "@libs/handlerResolver";
+
+export default {
+  hander: `${handlerPath(__dirname)}/handler.main`,
+  events: [
+    {
+      http: {
+        method: "post",
+        path: "recipes",
+        request: {
+          schema: {
+            'application/json': schema
+          }
+        }
+      }
+    }
+  ]
+};
