@@ -20,7 +20,7 @@ export default {
       description: 'Name of the recipe.'
     },
     ingredients: {
-      type: 'string[]',
+      type: 'array',
       minItems: 1,
       maxItems: 50,
       uniqueItems: true,
