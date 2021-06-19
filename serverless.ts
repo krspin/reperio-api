@@ -31,6 +31,7 @@ const serverlessConfiguration: AWS = {
   plugins: ['serverless-webpack', 'serverless-offline'],
   provider: {
     name: 'aws',
+    stage: "${opt:stage, 'dev'}",
     runtime: 'nodejs14.x',
     apiGateway: {
       minimumCompressionSize: 1024,
@@ -38,11 +39,11 @@ const serverlessConfiguration: AWS = {
     },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
-      DB_ENDPOINT: "${self:custom.rds.${opt:stage}.endpoint}",
-      DB_USERNAME: "${self:custom.rds.${opt:stage}.username}",
-      DB_PASSWORD: "${self:custom.rds.${opt:stage}.password}",
-      DB_PORT: "${self:custom.rds.${opt:stage}.port}",
-      DB_DBNAME: "${self:custom.rds.${opt:stage}.database}",
+      DB_ENDPOINT: "${self:custom.rds.${self:provider.stage}.endpoint}",
+      DB_USERNAME: "${self:custom.rds.${self:provider.stage}.username}",
+      DB_PASSWORD: "${self:custom.rds.${self:provider.stage}.password}",
+      DB_PORT: "${self:custom.rds.${self:provider.stage}.port}",
+      DB_DBNAME: "${self:custom.rds.${self:provider.stage}.database}",
     },
     lambdaHashingVersion: '20201221',
   },
