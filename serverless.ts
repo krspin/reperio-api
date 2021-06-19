@@ -16,14 +16,14 @@ const serverlessConfiguration: AWS = {
         endpoint: "mysql-database.caaeopmj7byg.us-east-1.rds.amazonaws.com",
         username: "dshehbaj",
         password: "aHjG2OGVxY87brUtnTZb",
-        database: "reperiodb",
+        database: 'reperio',
         port: "3306"
       },
       dev: {
         endpoint: "localhost",
         username: "shehbaj",
         password: "shehbaj",
-        database: "reperiodb",
+        database: 'reperio',
         port: "3306"
       }
     }

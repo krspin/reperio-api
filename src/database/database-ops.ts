@@ -1,7 +1,6 @@
 import Knex from "knex";
 
 const connection = {
-  ssl: { rejectUnauthorized: false },
   host: process.env.DB_ENDPOINT,
   user: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
