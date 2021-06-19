@@ -13,7 +13,6 @@ const postRecipes: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (ev
   let body: unknown | {[key: string]: string | number} = {};
 
   body = await knex('user_recipes').insert({
-    id: event.body.id,
     author: event.body.author,
     name: event.body.name,
     ingredients: event.body.ingredients.join(','),
@@ -21,7 +20,10 @@ const postRecipes: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (ev
     instructions: event.body.instructions,
     cost: event.body.cost,
     time: event.body.time,
-    difficulty: event.body.difficulty
+    difficulty: event.body.difficulty,
+    likes: 0,
+    comments: 0,
+    datePosted: new Date()
   });
 
   return formatJSONResponse({

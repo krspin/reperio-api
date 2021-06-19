@@ -1,16 +1,8 @@
 export default {
   type: 'object',
   properties: {
-    id: {
-      type: 'string',
-      minLength: 0,
-      maxLength: 36,
-      description: 'ID of the post.'
-    },
     author: {
-      type: 'string',
-      minLength: 0,
-      maxLength: 36,
+      type: 'integer',
       description: 'Author ID of the post creator.'
     },
     name: {
@@ -53,6 +45,6 @@ export default {
     }
   },
   required: [
-    'id', 'author', 'name', 'ingredients', 'instructions', 'cost', 'time', 'difficulty'
+    'author', 'name', 'ingredients', 'instructions', 'cost', 'time', 'difficulty'
   ]
 } as const;
