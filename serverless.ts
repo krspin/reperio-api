@@ -30,8 +30,8 @@ const serverlessConfiguration: AWS = {
       DB_ENDPOINT: awsconfig['dev'].rds.endpoint,
       DB_USERNAME: awsconfig['dev'].rds.username,
       DB_PASSWORD: awsconfig['dev'].rds.password,
-      DB_PORT: awsconfig['dev'].rds.database,
-      DB_DBNAME: awsconfig['dev'].rds.port,
+      DB_PORT: awsconfig['dev'].rds.port,
+      DB_DBNAME: awsconfig['dev'].rds.database
     },
     lambdaHashingVersion: '20201221',
   },
