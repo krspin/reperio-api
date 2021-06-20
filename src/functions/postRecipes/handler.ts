@@ -10,9 +10,7 @@ import schema from './schema';
 
 const postRecipes: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
 
-  let body: unknown | {[key: string]: string | number} = {};
-
-  body = await knex('user_recipes').insert({
+  const result = await knex('user_recipes').insert({
     author: event.body.author,
     name: event.body.name,
     ingredients: event.body.ingredients.join(','),
@@ -27,8 +25,8 @@ const postRecipes: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (ev
   });
 
   return formatJSONResponse({
-    body
-  })
+    result
+  });
 };
 
 export const main = middyfy(postRecipes);
