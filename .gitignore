@@ -1,6 +1,7 @@
 # Node package dirs
 node_modules
 jspm_packages
+config.ts
 
 # Serverless framework dirs
 .serverless
