@@ -1,6 +1,3 @@
-aws cli credentials
-AKIAYTUDTHIWXVHMHHKE
-UEdL/3eHgXIkU1r/AOdWb7oAbAcF1X0E6YGeXTJ4
 
 # Serverless - AWS Node.js Typescript
 
