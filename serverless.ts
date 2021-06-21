@@ -4,7 +4,6 @@ import postRecipes from '@functions/postRecipes';
 import updateRecipes from '@functions/updateRecipes';
 import getRecipesByID from '@functions/getRecipesByID';
 import deleteRecipesByID from '@functions/deleteRecipesByID';
-import graphQLHandler from '@functions/graphQLHandler';
 
 import awsconfig from './config';
 
@@ -37,8 +36,7 @@ const serverlessConfiguration: AWS = {
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
-  functions: { postRecipes, updateRecipes, getRecipesByID, deleteRecipesByID,
-  graphQLHandler},
+  functions: { postRecipes, updateRecipes, getRecipesByID, deleteRecipesByID },
 };
 
 module.exports = serverlessConfiguration;
