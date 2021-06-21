@@ -25,21 +25,6 @@ export const typeDefs = gql`
 
   type Query {
     books: [Book]
-    getRecipesByID(id: ID!): Recipe
-  }
-
-  type Mutation {
-
-    postRecipes(author: Int!, name: String!, ingredients: [String!]!,
-      media: String, instructions: String!, cost: Int!, time: Int!,
-      difficulty: Int!): Boolean
-
-    deleteRecipes(id: ID!): Boolean
-
-    updateRecipes(id: ID!, author: Int, name: String, ingredients: [String!],
-      media: String, instructions: String, cost: Int, time: Int,
-      difficulty: Int): Boolean
-
   }
 
 `;
