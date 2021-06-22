@@ -4,6 +4,7 @@ import postRecipes from '@functions/postRecipes';
 import updateRecipes from '@functions/updateRecipes';
 import getRecipesByID from '@functions/getRecipesByID';
 import deleteRecipesByID from '@functions/deleteRecipesByID';
+import apiGetByIngredients from '@functions/apiGetByIngredients';
 
 import awsconfig from './config';
 
@@ -31,12 +32,14 @@ const serverlessConfiguration: AWS = {
       DB_USERNAME: awsconfig['dev'].rds.username,
       DB_PASSWORD: awsconfig['dev'].rds.password,
       DB_PORT: awsconfig['dev'].rds.port,
-      DB_DBNAME: awsconfig['dev'].rds.database
+      DB_DBNAME: awsconfig['dev'].rds.database,
+      SPOONACULAR_API_KEY: awsconfig.spoonacular.apiKey,
     },
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
-  functions: { postRecipes, updateRecipes, getRecipesByID, deleteRecipesByID },
+  functions: { postRecipes, updateRecipes, getRecipesByID, deleteRecipesByID,
+  apiGetByIngredients },
 };
 
 module.exports = serverlessConfiguration;
