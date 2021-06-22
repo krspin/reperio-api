@@ -23,10 +23,6 @@ const apiGetByIngredients: ValidatedEventAPIGatewayProxyEvent<typeof schema> = a
   const result = await fetch(url);
   let res = await result.json();
 
-  console.log(url);
-  console.log(res);
-  console.log(typeof res);
-
   let newArr = res.map((recipeData) => {
     return {
       id: recipeData["id"],
